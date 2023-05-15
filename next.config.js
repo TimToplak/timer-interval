@@ -1,7 +1,9 @@
-const withPWA = require('next-pwa')({
-  dest: 'public',
-});
+const withPWA = require('next-pwa')
+const runtimeCaching = require('next-pwa/cache')
 
 module.exports = withPWA({
-  // next.js config
-});
+	pwa: {
+		dest: 'public',
+		runtimeCaching,
+	},
+})
